@@ -57,17 +57,26 @@ function Nav() {
         </div>
         <ul className={state.middleList} style={{ listStyle: "none" }}>
           <Link to={"/"}>
-            <li className="listItem">Home </li>
+            <li className="listItem" onClick={show}>
+              Home{" "}
+            </li>
           </Link>
 
           <Link to={"/shop"}>
-            <li className="listItem">Shop</li>
+            <li onClick={show} className="listItem">
+              Shop
+            </li>
           </Link>
           <Link to={"/cart"}>
-            <li className="listItem">cart</li>
+            <li onClick={show} className="listItem">
+              cart
+            </li>
           </Link>
           <Link to="/account">
-            <li className="listItem"> {switchName}</li>
+            <li onClick={show} className="listItem">
+              {" "}
+              {switchName}
+            </li>
           </Link>
         </ul>
       </div>

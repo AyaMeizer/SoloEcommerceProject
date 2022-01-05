@@ -156,8 +156,8 @@ function Register() {
     <>
       <div id="accounts-form-container">
         <div>
-          <h1 id="register_heading">Register</h1>
           <fieldset id="register-fieldset">
+            <h1 id="register_heading">Register</h1>
             <form onSubmit={handleSubmit}>
               <div id="register-form">
                 <div className="formGroupRegisterMahdi">
@@ -187,7 +187,7 @@ function Register() {
                   />
                   <p className="error" id="RU-lname"></p>
                 </div>
-               
+
                 <div className="formGroupRegisterMahdi">
                   <label htmlFor="phone">
                     Phone Number : <span className="accounts-important">*</span>

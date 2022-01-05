@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import ScrollAnimation from "react-animate-on-scroll";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/cart.css";
 function Cart() {
   let cartArray = localStorage.getItem("cartItems")
@@ -7,13 +8,12 @@ function Cart() {
     : [];
   const [state, setState] = useState(1);
   const [Cart, setCart] = useState(cartArray);
-   let Navigate=useNavigate()
-  let total=0
-     cartArray.forEach(element => {
-         return total=total+element.count*element.price
-        }
-        );
-        localStorage.setItem("totalPrice",total)
+  let Navigate = useNavigate();
+  let total = 0;
+  cartArray.forEach((element) => {
+    return (total = total + element.count * element.price);
+  });
+  localStorage.setItem("totalPrice", total);
   const plus = (id) => {
     cartArray.forEach((element) => {
       if (element.id === id) {
@@ -45,13 +45,13 @@ function Cart() {
 
   const deleteItem = (id) => {
     cartArray.forEach((element) => {
-        if (element.id === id) {
-            setCart(cartArray.filter((element) => element.id !== id));
-            localStorage.setItem(
-                "cartItems",
-                JSON.stringify(cartArray.filter((element) => element.id !== id))
-                );
-            }
+      if (element.id === id) {
+        setCart(cartArray.filter((element) => element.id !== id));
+        localStorage.setItem(
+          "cartItems",
+          JSON.stringify(cartArray.filter((element) => element.id !== id))
+        );
+      }
     });
   };
   let cart = Cart.map((item, key) => (
@@ -65,38 +65,37 @@ function Cart() {
       </div>
       <h3 className="cartItemPrice">JOD {item.price}</h3>
       <div className="cartBtns">
-      <button value={item.id} onClick={(e) => minus(e.target.value)}>
-        -
-      </button>
-      {item.count}
-      <button value={item.id} onClick={(e) => plus(e.target.value)}>
-        +{" "}
-      </button>
-      <button value={item.id} onClick={(e) => deleteItem(e.target.value)}>
-        X
-      </button>
+        <button value={item.id} onClick={(e) => minus(e.target.value)}>
+          -
+        </button>
+        {item.count}
+        <button value={item.id} onClick={(e) => plus(e.target.value)}>
+          +{" "}
+        </button>
+        <button value={item.id} onClick={(e) => deleteItem(e.target.value)}>
+          X
+        </button>
       </div>
     </div>
   ));
-  const checkoutHandler=()=>{
-    if(localStorage.getItem("logged_in")){
-      Navigate("/checkout")
+  const checkoutHandler = () => {
+    if (localStorage.getItem("logged_in")) {
+      Navigate("/checkout");
+    } else {
+      Navigate("/account");
     }
-    else{
-      Navigate("/account")
-    }
-  }
+  };
   if (cartArray.length) {
     return (
       <div className="cartCont">
         {cart}
-        <p>Total price {total}</p>
+        <h2><b>Total price: JOD {total}</b></h2>
         <div>
-        <button>
-          <Link to="/shop">Add Item</Link>{" "}
-        </button>
-        <button onClick={checkoutHandler}>Check Out</button>
-      </div>
+          <button>
+            <Link to="/shop">Add Item</Link>{" "}
+          </button>
+          <button onClick={checkoutHandler}>Check Out</button>
+        </div>
       </div>
     );
   } else {
@@ -106,9 +105,11 @@ function Cart() {
           src="https://redifo.com/public/images/empty-cart.png"
           alt="empty cart"
         />
-          <button>
-          <Link to="/shop">Add Item</Link>{" "}
-        </button>
+        <ScrollAnimation animateIn="animate__tada" initiallyVisible={true}>
+          <button className="emptyCartBtn">
+            <Link to="/shop">Add Item</Link>{" "}
+          </button>
+        </ScrollAnimation>
       </div>
     );
   }

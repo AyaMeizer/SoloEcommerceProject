@@ -109,9 +109,9 @@ function Shop() {
   const deleteItem = (id) => {
     cartArr.forEach((element) => {
       if (element.id === id) {
-        cartArr=cartArr.filter((element)=>(element.id!==id));
+        cartArr = cartArr.filter((element) => element.id !== id);
         setCart(cartArr);
-        }
+      }
       localStorage.setItem("cartItems", JSON.stringify(cartArr));
     });
   };
@@ -150,13 +150,27 @@ function Shop() {
               <option disabled value={"Categories"}>
                 Categories
               </option>
-              <option value={"all"}>All Shoes</option>
-              <option value={"puma"}>Puma</option>
-              <option value={"nike"}>Nike</option>
-              <option value={"adidas"}>Adidas</option>
-              <option value={"Uomo"}>Uomo</option>
-              <option value={"OM74"}>OM74</option>
-              <option value={"other"}>Other</option>
+              <option className="options" value={"all"}>
+                All Shoes
+              </option>
+              <option className="options" value={"puma"}>
+                Puma
+              </option>
+              <option className="options" value={"nike"}>
+                Nike
+              </option>
+              <option className="options" value={"adidas"}>
+                Adidas
+              </option>
+              <option className="options" value={"Uomo"}>
+                Uomo
+              </option>
+              <option className="options" value={"OM74"}>
+                OM74
+              </option>
+              <option className="options" value={"other"}>
+                Other
+              </option>
             </select>
           </div>
         </div>

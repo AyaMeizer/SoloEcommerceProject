@@ -64,6 +64,9 @@
     background: var(--grayBlue);
 }
 .orderCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 1px 1px 8px grey;
     width: 40%;
     margin: 5% auto;

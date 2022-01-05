@@ -16,6 +16,7 @@
     text-align: center;
     width: 100%;
     background: oldlace;
+    margin: 2em 0 0 0;
   }
   fieldset a {
     color: gold;
@@ -35,9 +36,6 @@
     max-width: 40em;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   #login_email,#login_password {
     width: 100%;
@@ -48,7 +46,7 @@
   .login-title {
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2em;
   }
   #remember-me-container {
     width: 50%;
@@ -241,11 +239,6 @@
     }
     .a-login {
       text-align: center;
-    }
-    #login-fieldset{
-      margin: 0;
-      background: oldlace;
-      width: 80%;
     }
     #userProfile{
       display: flex;

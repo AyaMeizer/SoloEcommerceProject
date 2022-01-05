@@ -11,8 +11,10 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import HeroImage from "./components/HeroImg";
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(JSON.parse(localStorage.getItem("logged_in")))
-  const [items, setitems] = useState(JSON.parse(localStorage.getItem("items")))
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    JSON.parse(localStorage.getItem("logged_in"))
+  );
+  const [items, setitems] = useState(JSON.parse(localStorage.getItem("items")));
   const handleChangeRole = () => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("logged_in")));
   };
@@ -20,7 +22,7 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<HeroImage />}/>
+        <Route path="/" element={<HeroImage />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />

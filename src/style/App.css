@@ -1,3 +1,4 @@
+@import "animate.css/animate.min.css";
 .App {
   text-align: center;
   height: 20em;
@@ -37,24 +38,25 @@
     transform: rotate(360deg);
   }
 }
-:root{
-  --black: #0A0908;
-  --white:#F2F4F3;
-  --p-gold:#9D8302;
-  --p-l-light:#ECCF3D ;
-  --p-m-light:#CEAB00;
-  --s-dark:#E0D07A;
-  --s-m-light:#E5D999;
-  --s-l-light:#E9E2B7;
-  --s-xl-light:#fffdf4b0;
+:root {
+  --black: #0a0908;
+  --white: #f2f4f3;
+  --p-gold: #9d8302;
+  --p-l-light: #eccf3d;
+  --p-m-light: #ceab00;
+  --s-dark: #e0d07a;
+  --s-m-light: #e5d999;
+  --s-l-light: #e9e2b7;
+  --s-xl-light: #fffdf4b0;
 }
-button{
-  padding: 0.3em 1em;
-  border-radius: 0.3em;
+button {
+  padding: 0.8em 1.5em;
+  border-radius: 5em;
+  border: none;
   background-color: var(--s-dark);
   margin: 0 1em 0 0;
 }
-button:hover{
+button:hover {
   background-color: var(--p-m-light);
   color: white;
 }

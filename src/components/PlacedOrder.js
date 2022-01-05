@@ -1,3 +1,4 @@
+import ScrollAnimation from "react-animate-on-scroll";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,9 +10,11 @@ export class PlacedOrder extends Component {
         <h3 className="orderMessage">
           Your order is placed, We appreciate your trust
         </h3>
-        <button>
-          <Link to="/shop">Back to shop</Link>{" "}
-        </button>
+        <ScrollAnimation animateIn="animate__pulse" initiallyVisible={true}>
+          <button className="emptyCartBtn">
+            <Link to="/shop">Back to shop</Link>{" "}
+          </button>
+        </ScrollAnimation>
       </div>
     );
   }
