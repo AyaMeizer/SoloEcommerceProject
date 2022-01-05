@@ -66,11 +66,11 @@ function Cart() {
       <h3 className="cartItemPrice">JOD {item.price}</h3>
       <div className="cartBtns">
         <button value={item.id} onClick={(e) => minus(e.target.value)}>
-          - 
+          -
         </button>
-         {item.count} 
+        {item.count}
         <button value={item.id} onClick={(e) => plus(e.target.value)}>
-           +{" "}
+          +{" "}
         </button>
         <button value={item.id} onClick={(e) => deleteItem(e.target.value)}>
           X
@@ -89,11 +89,13 @@ function Cart() {
     return (
       <div className="cartCont">
         {cart}
-        <h2><b>Total price: JOD {total}</b></h2>
+        <h2>
+          <b>Total price: JOD {total}</b>
+        </h2>
         <div>
-          <button>
-            <Link to="/shop">Add Item</Link>{" "}
-          </button>
+          <Link to="/shop">
+            <button>Add Item</button>
+          </Link>{" "}
           <button onClick={checkoutHandler}>Check Out</button>
         </div>
       </div>
@@ -102,13 +104,14 @@ function Cart() {
     return (
       <div className="cartCont">
         <img
+          className="emptyCartImg"
           src="https://redifo.com/public/images/empty-cart.png"
           alt="empty cart"
         />
         <ScrollAnimation animateIn="animate__tada" initiallyVisible={true}>
-          <button className="emptyCartBtn">
-            <Link to="/shop">Add Item</Link>{" "}
-          </button>
+          <Link to="/shop">
+            <button className="emptyCartBtn">Add Item</button>
+          </Link>{" "}
         </ScrollAnimation>
       </div>
     );

@@ -49,7 +49,7 @@ export default function Checkout() {
   ));
   let couponHandler = (e) => {
     if (e.target.value === state.coupon) {
-      setState({ ...state, copVal: -0.04 });
+      setState({ ...state, copVal: -0.1 });
       document.querySelector(".totalTaxes1").style.color = "red";
     }
   };
@@ -137,8 +137,8 @@ export default function Checkout() {
                   <span>{Math.round(total() * 100) / 100} Jd</span>
                 </span>
                 <span className="totalTaxes totalTaxes1">
-                  Coupon
-                  <span>{state.copVal}</span>
+                  Discount
+                  <span> {total() * state.copVal } Jd</span>
                 </span>
                 <hr />
                 <div className="totalSection">

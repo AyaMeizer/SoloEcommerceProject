@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../style/accounts.css";
+import "../style/profileOrders.css";
 
 function Login(props) {
   let navigate = useNavigate();
@@ -88,6 +89,14 @@ function Login(props) {
   const badImage = (e) => {
     e.target.onerror = null;
   };
+  let values = orders.map((item, index) => (
+    <span className="billProducts" key={index}>
+      <span>
+        {index + 1}- {item.name } * { item.count}
+      </span>
+      <span>{item.price}Jd</span>
+    </span>
+  ));
   if (!localStorage.getItem("logged_in"))
     return (
       <>
@@ -172,15 +181,13 @@ function Login(props) {
           </div>
           <br />
           <div id="accountCarsWrapperMahdi">
-            {orders.map((order, index) => {
-              return (
-                <div id="selected_car_account" key={index}>
-                  <div>
-                    <img src={order.img} alt="order" />
-                  </div>
-                </div>
-              );
-            })}
+          <div className="billCard">
+                <h3 className="billTitle">Your Order History</h3>
+                <span className="products"> {values} </span>
+                <hr />
+               
+                <hr />
+              </div>
           </div>
         </div>
       </>

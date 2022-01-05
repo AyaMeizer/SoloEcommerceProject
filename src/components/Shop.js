@@ -137,15 +137,13 @@ function Shop() {
           <Link to="/cart"> View Cart</Link>
         </button>
       </div>
-      <div>
-        <div className="shopCont">
+      <div className="shopCont">
           <input
             className="shopSearch"
             value={search}
             onChange={handleSearch}
             placeholder="search.."
           ></input>
-          <div>
             <select className="categories" onChange={filtering}>
               <option disabled value={"Categories"}>
                 Categories
@@ -173,10 +171,8 @@ function Shop() {
               </option>
             </select>
           </div>
-        </div>
         <div className="items">{products}</div>
       </div>
-    </div>
   );
 }
 

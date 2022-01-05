@@ -81,7 +81,7 @@ export function HeroImage() {
           <h1 style={{ color: "white" }}>
             {" "}
             you can get a diccount by using{" "}
-            <b style={{ color: "gold" }}>"OCA2022"</b> coupon
+            <b style={{ color: "gold" }}>"OCA2022"</b> coupon for 10% Discount
           </h1>
         </ScrollAnimation>
         <ScrollAnimation

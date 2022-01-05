@@ -15,7 +15,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    background: oldlace;
+    background: #e0d17a1a;
     margin: 2em 0 0 0;
   }
   fieldset a {
@@ -101,7 +101,7 @@
     outline: 1px solid var(--p_light);
   }
   #register-fieldset{
-    background-color: oldlace;
+    background-color: #e0d17a1a;
     width: 50%;
     margin: auto;
     border-radius: 0.5em;
@@ -218,7 +218,7 @@
   
   @media only screen and (max-width: 680px) {
     #register-fieldset{
-      background-color: oldlace;
+      /* background-color: oldlace; */
       width: 90%;
       margin: auto;
     }

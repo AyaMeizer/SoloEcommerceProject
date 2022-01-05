@@ -111,6 +111,7 @@
         .orderCont,.orderCont h2,.orderCont h3 {
             font-size: 16px;
             width: 80%;
+            box-sizing: border-box;
         }
         .form{
             padding: 0%;
