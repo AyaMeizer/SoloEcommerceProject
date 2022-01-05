@@ -66,11 +66,11 @@ function Cart() {
       <h3 className="cartItemPrice">JOD {item.price}</h3>
       <div className="cartBtns">
         <button value={item.id} onClick={(e) => minus(e.target.value)}>
-          -
+          - 
         </button>
-        {item.count}
+         {item.count} 
         <button value={item.id} onClick={(e) => plus(e.target.value)}>
-          +{" "}
+           +{" "}
         </button>
         <button value={item.id} onClick={(e) => deleteItem(e.target.value)}>
           X
