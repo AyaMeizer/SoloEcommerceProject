@@ -1,6 +1,6 @@
 import PlacedOrder from "./PlacedOrder";
 import "../style/checkout.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 export default function Checkout() {
   const [state, setState] = useState({
@@ -10,6 +10,14 @@ export default function Checkout() {
     copVal: 0,
   });
   const Navigate = useNavigate();
+  useEffect(() => {
+   if(!localStorage.getItem("logged_in")){
+    Navigate("/account")
+   }
+   else if(!localStorage.getItem("cartItems")||localStorage.getItem("cartItems")==="[]"){
+     Navigate("/shop")
+   }
+  }, [])
   const submitted = (e) => {
     e.preventDefault();
     setState({ submitState: "submitted" });
@@ -138,7 +146,7 @@ export default function Checkout() {
                 </span>
                 <span className="totalTaxes totalTaxes1">
                   Discount
-                  <span> {total() * state.copVal } Jd</span>
+                  <span> {Math.round(total() * state.copVal*100)/100 } Jd</span>
                 </span>
                 <hr />
                 <div className="totalSection">

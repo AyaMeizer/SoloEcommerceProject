@@ -42,7 +42,7 @@ function Nav() {
               <img
                 className="Nav logoImg"
                 src={logo}
-                style={{ width: "110px", height: "40px" }}
+                style={{ width: "80px", height: "40px" }}
                 alt="logo"
               />
               <p>ShuShop</p>

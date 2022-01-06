@@ -59,4 +59,5 @@ button {
 button:hover {
   background-color: var(--p-m-light);
   color: white;
+  cursor: pointer;
 }

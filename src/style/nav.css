@@ -14,7 +14,7 @@
   padding: 0;
 }
 .Nav.brand {
-  margin-left: 2em;
+  margin-left: 3em;
 }
 .Nav.brand p {
   text-align: center;
@@ -41,13 +41,13 @@ a {
 }
 .Nav.middleList {
   display: flex;
-  width: 42%;
+  width: 30%;
   justify-content: space-between;
   text-decoration: none;
   list-style: none;
   font-family: "Kanit", sans-serif;
   cursor: pointer;
-  margin-right: 2em;
+  margin-right: 5em;
 }
 .middleList li:hover {
   text-decoration: underline;
@@ -134,12 +134,12 @@ a {
   }
   .toggle.middleList {
     display: flex;
-    width: 42%;
+    width: 30%;
     justify-content: space-between;
     text-decoration: none;
     list-style: none;
     font-family: "Kanit", sans-serif;
     cursor: pointer;
-    margin-right: 2em;
+    margin-right: 5em;
   }
 }

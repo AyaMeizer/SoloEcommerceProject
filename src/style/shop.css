@@ -10,16 +10,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  var(--p-l-light);
+    margin-bottom: 2em;
   }
   .shopSearch {
   width: 50%;
   height: 3.8em;
   margin: 0 1em;
   padding: 0 2%;
-  background-color: var(--s-xl-light);
+  /* background-color: var(--s-xl-light); */
   border-radius: 1em;
   border: goldenrod 1px solid;
   grid-row: 1;
+  opacity: 0.88;
 }
 .categories {
   border-radius: 1em;
@@ -28,11 +31,12 @@
   width: 10em;
   text-align: center;
   height: 4em;
-  background-color: var(--s-xl-light);
+  /* background-color: var(--s-xl-light); */
   text-align: center;
   border-radius: 1em;
   padding: 1em;
   grid-row: 1;
+  opacity: 0.88;
 }
 .categories li {
   background-color: var(--s-dark);
@@ -59,12 +63,14 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  padding: 1em;
+  /* padding: 1em; */
+  box-shadow: 1px 1px 8px #0000004f;
   margin: auto;
   width: 15em;
-  border-radius: 1em;
+  /* border-radius: 1em; */
   grid-row: 2;
   grid-column: 2;
+  margin: 0.5em;
 }
 .itemCont h3 {
   margin: 0;
@@ -78,11 +84,14 @@
   transition-duration: 0.3s;
 }
 .addToCart {
-  padding: 0.5em 1em;
-  border-radius: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 0;
   border: var(--p-gold) 0.1px dotted;
   font-size: 15px;
   background-color: var(--p-l-light);
+  width: 100%;
+  margin: 0;
+  box-shadow: 1px 3px 8px #00000033;
 }
 .addToCart:hover {
   background-color: var(--p-gold);

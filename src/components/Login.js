@@ -24,7 +24,7 @@ function Login(props) {
   const [lname, setlname] = useState(logged_user.lname);
   const [image_url, setimage_url] = useState(logged_user.img);
   const [logged, setlogged] = useState("");
-
+  const [update, setUpdate] = useState(0)
   const handleSubmit = (e) => {
     let found = false;
     let index;
@@ -97,9 +97,13 @@ function Login(props) {
       <span>{item.price}Jd</span>
     </span>
   ));
+  const clearHistory=()=>{
+    localStorage.removeItem("Orders")
+    setUpdate(1)
+  }
   if (!localStorage.getItem("logged_in"))
-    return (
-      <>
+  return (
+    <>
         <div id="accounts-form-container">
           <div className="login-container">
             <fieldset id="login-fieldset">
@@ -183,10 +187,11 @@ function Login(props) {
           <div id="accountCarsWrapperMahdi">
           <div className="billCard">
                 <h3 className="billTitle">Your Order History</h3>
-                <span className="products"> {values} </span>
+                <span className="products"> {update===0?values:"No orders Yet :("} </span>
                 <hr />
                
                 <hr />
+            <button id="clearHistory" onClick={clearHistory}>Clear History</button>
               </div>
           </div>
         </div>

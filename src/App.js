@@ -9,7 +9,7 @@ import PlacedOrder from "./components/PlacedOrder";
 import { useState } from "react";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import HeroImage from "./components/HeroImg";
+import HeroImage from "./components/Home";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
     JSON.parse(localStorage.getItem("logged_in"))
