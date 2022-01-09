@@ -7,6 +7,10 @@ const userController = require('../controllers/user.controller')
 
 
 
-router.get("/home", userController.login)
+router.post("/create", userController.create)
+router.get("/update/:id", userController.update)
+router.get("/getUser", userController.getUser)
+router.get("/delete/:id", userController.delete)
+
 
 module.exports = router

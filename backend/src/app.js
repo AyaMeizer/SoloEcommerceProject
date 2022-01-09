@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-var connection = mongoose.connect('mongodb://localhost:27017/admin', {
+mongoose.connect('mongodb://localhost:27017/admin', {
     useNewUrlParser: true,
     useCreateIndex: true,
     poolSize: 10,

@@ -4,16 +4,24 @@
   grid-template-rows: auto auto;
 }
 .shopCont {
-  padding: 1em 2em;
-    grid-area: unset;
-    grid-column: 1/span 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  var(--p-l-light);
-    margin-bottom: 2em;
-  }
-  .shopSearch {
+  background-image: url(../assets//images/searchCont2.png);
+  margin-bottom: 2em;
+  height: 7em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  grid-area: unset;
+  grid-column: 1 / span 3;
+}
+.searchOverlay {
+  background-color: rgba(0, 0, 0, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7em;
+  padding: 0em 2em;
+}
+.shopSearch {
   width: 50%;
   height: 3.8em;
   margin: 0 1em;
@@ -64,6 +72,7 @@
   align-content: center;
   align-items: center;
   /* padding: 1em; */
+  background: white;
   box-shadow: 1px 1px 8px #0000004f;
   margin: auto;
   width: 15em;
@@ -88,13 +97,14 @@
   border-radius: 0;
   border: var(--p-gold) 0.1px dotted;
   font-size: 15px;
-  background-color: var(--p-l-light);
+  background-color: #2099a1;
   width: 100%;
   margin: 0;
   box-shadow: 1px 3px 8px #00000033;
+  color: white;
 }
 .addToCart:hover {
-  background-color: var(--p-gold);
+  background-color: #2ab3bd;
   color: var(--white);
   transition-duration: 0.2s;
 }
@@ -146,6 +156,7 @@
   #cartDiv {
     position: static;
     margin: 0.5em auto;
-    width:60%;
+    width: 60%;
+    display: none;
   }
 }

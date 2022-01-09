@@ -68,8 +68,8 @@ function Shop() {
       setShop(
         product.filter(
           (item) =>
-            item.name.toLowerCase().includes(search.toLowerCase()) ||
-            item.texture.toLowerCase().includes(search.toLowerCase())
+            item.name.toLowerCase().match(search.toLowerCase()) ||
+            item.texture.toLowerCase().match(search.toLowerCase())
         )
       );
     } else setShop(product);
@@ -133,46 +133,48 @@ function Shop() {
       <div id="cartDiv" style={{ visibility: a }}>
         <p> In Cart : {inCart.length} items</p>
         {inCart}
-        <button>
-          <Link to="/cart"> View Cart</Link>
-        </button>
+        <Link to="/cart">
+          <button>View Cart</button>
+        </Link>
       </div>
       <div className="shopCont">
+        <div className="searchOverlay">
           <input
             className="shopSearch"
             value={search}
             onChange={handleSearch}
             placeholder="search.."
           ></input>
-            <select className="categories" onChange={filtering}>
-              <option disabled value={"Categories"}>
-                Categories
-              </option>
-              <option className="options" value={"all"}>
-                All Shoes
-              </option>
-              <option className="options" value={"puma"}>
-                Puma
-              </option>
-              <option className="options" value={"nike"}>
-                Nike
-              </option>
-              <option className="options" value={"adidas"}>
-                Adidas
-              </option>
-              <option className="options" value={"Uomo"}>
-                Uomo
-              </option>
-              <option className="options" value={"OM74"}>
-                OM74
-              </option>
-              <option className="options" value={"other"}>
-                Other
-              </option>
-            </select>
-          </div>
-        <div className="items">{products}</div>
+          <select className="categories" onChange={filtering}>
+            <option disabled value={"Categories"}>
+              Categories
+            </option>
+            <option className="options" value={"all"}>
+              All Shoes
+            </option>
+            <option className="options" value={"puma"}>
+              Puma
+            </option>
+            <option className="options" value={"nike"}>
+              Nike
+            </option>
+            <option className="options" value={"adidas"}>
+              Adidas
+            </option>
+            <option className="options" value={"Uomo"}>
+              Uomo
+            </option>
+            <option className="options" value={"OM74"}>
+              OM74
+            </option>
+            <option className="options" value={"other"}>
+              Other
+            </option>
+          </select>
+        </div>
       </div>
+      <div className="items">{products}</div>
+    </div>
   );
 }
 

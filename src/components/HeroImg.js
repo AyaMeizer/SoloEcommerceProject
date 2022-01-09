@@ -80,7 +80,7 @@ export function HeroImage() {
           <p className="welcome"> Welcome to shoes store</p>
           <h1 style={{ color: "white" }}>
             {" "}
-            you can get a diccount by using{" "}
+            you can use{" "}
             <b style={{ color: "gold" }}>"OCA2022"</b> coupon for 10% Discount
           </h1>
         </ScrollAnimation>
