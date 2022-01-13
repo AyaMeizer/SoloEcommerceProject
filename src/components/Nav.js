@@ -45,7 +45,7 @@ function Nav() {
                 style={{ width: "80px", height: "40px" }}
                 alt="logo"
               />
-              <p>ShuShop</p>
+              <p>Sneaker</p>
             </Link>
           </div>
           <img

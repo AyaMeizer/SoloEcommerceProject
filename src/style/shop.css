@@ -97,14 +97,14 @@
   border-radius: 0;
   border: var(--p-gold) 0.1px dotted;
   font-size: 15px;
-  background-color: #2099a1;
+  background-color: #060a0a;
   width: 100%;
   margin: 0;
   box-shadow: 1px 3px 8px #00000033;
   color: white;
 }
 .addToCart:hover {
-  background-color: #2ab3bd;
+  background-color: #bea30ac5;
   color: var(--white);
   transition-duration: 0.2s;
 }

@@ -24,6 +24,14 @@ function Home() {
       <div className="featuredCont">
           {sales}</div>
         </ScrollAnimation>
+        <div>
+          <div className="salesImg">
+          <div className="salesOverlay">
+            <p className="salesTitle">Visit Our shop to see new winter collection. <pre></pre>
+            Dont forget to use "OCA2022" coupon to get a 20% discount!!</p>
+          </div>
+        </div>
+            </div>
     </div>
   );
 }

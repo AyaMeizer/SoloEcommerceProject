@@ -30,7 +30,7 @@ function Cart() {
   const minus = (id) => {
     cartArray.forEach((element) => {
       if (element.id === id) {
-        if (element.count) {
+        if (element.count>1) {
           element.count -= 1;
           setState(element.count);
           setCart(cartArray);

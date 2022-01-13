@@ -9,6 +9,8 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
+    width: 80%;
+    margin: auto;
 }
 .featuredItem{
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.164);
@@ -21,6 +23,30 @@
     padding: 1em;
 }
 .featuredImg{
-    width: 200px;
-    height: 200px;
+    width: 60%;
+    height: 70%;
+}
+.salesImg{
+    margin: 3em auto;
+    background-image: url("https://blog.sensefuel.com/hubfs/Pour%20Blog%20%28illustrations%20et%20photos%29/adidas-app-mobiles.jpg");
+    height: 25em;
+    width: 80%;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 1em;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.938);
+}
+.salesOverlay{
+    margin: 0 auto;
+    height: 25em;
+    background: rgba(180, 180, 180, 0.192);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.salesTitle{
+    color: whitesmoke;
+    font-size: 2em;
+    text-align: center;
 }
